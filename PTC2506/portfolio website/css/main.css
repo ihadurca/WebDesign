@@ -11,3 +11,17 @@ body {
 	margin-right: auto;
 	margin-left: auto;
 }
+.wrapper {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #666;
+	background-color: #FFF;
+	height: auto;
+	width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: .8em;
+	-webkit-border-radius: .8em; /* Chrome Pref*/
+	-moz-border-radius: .8em; /* Firefox Pref*/
+	
+}
