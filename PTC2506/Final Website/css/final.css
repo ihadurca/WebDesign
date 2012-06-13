@@ -3,12 +3,9 @@
 
 /* normalizes margin, padding */
 ul,ol,li,h1,h2,h3,h4,h5,h6,hr,pre,form,body,html,p,blockquote,fieldset,input {
-	margin:0;
-	padding:0;
-	background-color: #FFF;
 }
 body {
-	background-color: #0C3;
+	background-color: #000;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -20,11 +17,14 @@ body {
 	-webkit-border-bottom-left-radius: 10px;
 	-webkit-border-bottom-right-radius: 30px;
 	color: #03F;
-	height: 450px;
-	width: 450px;
-	background-color: #039;
-	margin: 10px;
+	height: auto;
+	width: 1000;
+	background-color: #0F0;
+	text-align:center;
+	margin-right: 10px;
+	margin-left: 10px;
+	border: thin solid #000;
 }
 .wrapper {
-	background-color: #000;
+	/* [disabled]background-color: #000; */
 }
