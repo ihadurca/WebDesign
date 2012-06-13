@@ -2,29 +2,117 @@
 /* CSS Document */
 
 /* normalizes margin, padding */
-ul,ol,li,h1,h2,h3,h4,h5,h6,hr,pre,form,body,html,p,blockquote,fieldset,input {
-}
+ul,ol,li,h1,h2,h3,h4,h5,h6,hr,pre,form,body,html,p,blockquote,fieldset,input { margin:0; padding:0; }
 body {
 	background-color: #000;
 	margin-right: auto;
 	margin-left: auto;
 }
-.header {
+.topbars {
 	font-family: "Comic Sans MS", cursive;
 	font-size: 16px;
 	-webkit-border-top-left-radius: 30px;
 	-webkit-border-top-right-radius: 10px;
 	-webkit-border-bottom-left-radius: 10px;
 	-webkit-border-bottom-right-radius: 30px;
+	
+	-moz-border-radius-bottomleft: 10px;
+	-moz-border-radius-bottomright: 30px;
+	-moz-border-radius-topright: 10px;
+	-moz-border-radius-topleft: 30px;
+	
 	color: #03F;
 	height: auto;
-	width: 1000;
+	width: 1000px;
 	background-color: #0F0;
 	text-align:center;
 	margin-right: 10px;
 	margin-left: 10px;
-	border: thin solid #000;
+	border: thin none #000;
 }
 .wrapper {
 	/* [disabled]background-color: #000; */
+	width: 1020px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.content{
+	font-family: "Comic Sans MS", cursive;
+	font-size: 16px;
+	-webkit-border-top-left-radius: 30px;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 30px;
+-moz-border-radius-bottomleft: 10px;
+	-moz-border-radius-bottomright: 30px;
+	-moz-border-radius-topright: 10px;
+	-moz-border-radius-topleft: 30px;
+	color: #000;
+	height: auto;
+	width: 500px;
+	background-color: #FFF;
+	text-align:left;
+	margin-right: 10px;
+	margin-left: 10px;
+	border: thin none #000;
+	margin-top: 10px;
+}
+.contenttop{
+	-webkit-border-top-left-radius: 30px;
+	-webkit-border-top-right-radius: 10px;
+	
+	-moz-border-radius-topright: 10px;
+	-moz-border-radius-topleft: 30px;
+	
+	
+	border: thin none #000;
+	background-color: #03F;
+	text-align: center;	
+}
+.leftcontent {
+	float: left;
+	font-family: "Comic Sans MS", cursive;
+	font-size: 16px;
+	-webkit-border-top-left-radius: 30px;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 30px;
+	
+	-moz-border-radius-bottomleft: 10px;
+	-moz-border-radius-bottomright: 30px;
+	-moz-border-radius-topright: 10px;
+	-moz-border-radius-topleft: 30px;
+	
+	color: #000;
+	
+	width: 450px;
+	background-color: #FFF;
+	text-align:left;
+	margin-right: 10px;
+	margin-left: 10px;
+	border: thin none #000;
+	margin-top: 10px;
+}
+.rightcontent {
+	float: right;
+	font-family: "Comic Sans MS", cursive;
+	font-size: 16px;
+	-webkit-border-top-left-radius: 30px;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 30px;
+	-moz-border-radius-bottomleft: 10px;
+	-moz-border-radius-bottomright: 30px;
+	-moz-border-radius-topright: 10px;
+	-moz-border-radius-topleft: 30px;
+	color: #000;
+	
+	width: 450px;
+	background-color: #FFF;
+	text-align:left;
+	margin-right: 10px;
+	margin-left: 10px;
+	border: thin none #000;
+	margin-top: 10px;
 }
