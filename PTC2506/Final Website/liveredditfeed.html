@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Reddit Top Content - Live</title>
+
+<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+<script type="text/javascript">
+var domain;
+var ups;
+var downs;
+var thumb;
+var url;
+var title;
+var score;
+var refreshes = 0;
+var ctext;
+//var redd = document.getElementById('Reddit');
+
+function loadChirp(){
+
+	$.getJSON("http://www.reddit.com/.json?jsonp=?", function(data) {
+		//alert("got json");
+		domain = data.data.children[0].data.domain;
+		ups = data.data.children[0].data.ups;
+		downs = data.data.children[0].data.downs;
+		thumb = data.data.children[0].data.thumbnail;
+		url = data.data.children[0].data.url;
+		title = data.data.children[0].data.title;
+		score = data.data.children[0].data.score;
+	/*
+		var items = [];
+	alert("got json");*/
+	  $.each(data.data.children, function(key, val) {
+		//alert(val.data.domain);
+	  });
+	/*
+	  $('<ul/>', {
+		'class': 'my-new-list',
+		html: items.join('')
+	  }).appendTo('body');
+	 
+	*/
+	ctext = "Title: "+ title+"<br>Score: "+ score +"<br>Domain: " + domain + "<br>" + "Url: <img src='"+url+"' width='220'><br>"+refreshes;
+	
+	//var ctext = "test";
+	document.getElementById('Reddit').innerHTML = ctext;
+	refreshes = refreshes + 1;
+	})
+.error(function() { alert("error"); });
+	
+	
+setTimeout("loadChirp()",5000);
+}
+
+	
+
+</script>
+</head>
+
+<body onLoad="loadChirp();">
+<div id="Reddit"> </div>
+
+</body>
+</html>

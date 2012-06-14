@@ -93,6 +93,7 @@ body {
 	margin-left: 10px;
 	border: thin none #000;
 	margin-top: 10px;
+	display: inline;
 }
 .rightcontent {
 	float: right;
@@ -107,7 +108,7 @@ body {
 	-moz-border-radius-topright: 10px;
 	-moz-border-radius-topleft: 30px;
 	color: #000;
-	
+	display: inline;
 	width: 450px;
 	background-color: #FFF;
 	text-align:left;
