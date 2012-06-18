@@ -3,6 +3,40 @@
 
 /* normalizes margin, padding */
 ul,ol,li,h1,h2,h3,h4,h5,h6,hr,pre,form,body,html,p,blockquote,fieldset,input { margin:0; padding:0; }
+
+
+ul[title=menu] {
+	text-align: left;
+	display: inline;
+	list-style-position: inside;
+	list-style-type: none;
+}
+li[title=menu] {
+	text-align: left;
+	display: inline;
+	padding-right: 5px;
+	padding-left: 5px;
+	list-style-position: inside;
+	list-style-type: none;
+}
+
+a:link {
+	color: #000000; 
+	text-decoration: none; 
+	}
+a:active {
+	color: #0000ff; 
+	text-decoration: none; 
+	}
+a:visited {
+	color: #008000; 
+	text-decoration: none; 
+	}
+a:hover {
+	color: #ff0000; 
+	text-decoration: none; 
+	}
+
 body {
 	background-color: #000;
 	margin-right: auto;
@@ -50,7 +84,7 @@ body {
 	-moz-border-radius-topleft: 30px;
 	color: #000;
 	height: auto;
-	width: 500px;
+	width: 1000px;
 	background-color: #FFF;
 	text-align:left;
 	margin-right: 10px;
@@ -116,4 +150,17 @@ body {
 	margin-left: 10px;
 	border: thin none #000;
 	margin-top: 10px;
+}
+
+body {
+	background-color: #000;
+	
+	background-repeat: repeat-y;
+	background-position: 50%;
+	margin-right: auto;
+	margin-left: auto;
+}
+.backgroundreddit{
+background-image: url(../images/backgroundred.png);	
+	
 }
