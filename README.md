@@ -9,3 +9,5 @@ To use in the Mac lab
 2. Git Clone using the git address. https://ihadurca@github.com/ihadurca/WebDesign.git
 3. Update files, commit & push back to Git
 4. Henceforth "pull" at the beginning of each class & "push" at the end.
+
+http://www.eloquent-web-and-graphic-design.com/2012_summer/01/nicholas_lace/portfolio/photos.html
