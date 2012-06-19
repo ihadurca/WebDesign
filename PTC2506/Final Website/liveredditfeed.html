@@ -22,21 +22,10 @@ var refreshevery = "5000"
 function loadChirp(){
 
 	$.getJSON("http://www.reddit.com/.json?jsonp=?", function(data) {
-		//alert("got json");
-		/*domain = data.data.children[0].data.domain;
-		ups = data.data.children[0].data.ups;
-		downs = data.data.children[0].data.downs;
-		thumb = data.data.children[0].data.thumbnail;
-		url = data.data.children[0].data.url;
-		title = data.data.children[0].data.title;
-		score = data.data.children[0].data.score;
-		commentcnt = data.data.children[0].data.num_comments;
-	/*
-		var items = [];
-	alert("got json");*/
-var ctext = "";
-	  $.each(data.data.children, function(key, val) {
-		//alert(val.data.domain);
+	
+	var ctext = "";
+	$.each(data.data.children, function(key, val) {
+	
 		var dom = val.data.domain;
 		var up = val.data.ups;
 		var down = val.data.downs;
@@ -44,15 +33,19 @@ var ctext = "";
 		var urls = val.data.url;
 		var title = val.data.title;
 		var score = val.data.score;
-		var commentcnt = val.data.num_comments
+		var commentcnt = val.data.num_comments;
+		var subreddit = val.data.subreddit;
+		var author = val.data.author;
 		
 		
-		
-		
-	/*	ctext = ctext + "Title: <a href='"+urls+"'>"+ title+"</a><br>Score: "+ score +"<br>Domain: " + domain + "<br>" + "Thumbnail: <img src='"+thumb+"'><br>Comments: "+commentcnt +"<br>"+refreshes+"<br>";
-	*/
 	
-	ctext = ctext + "<div class='content'><div class='contenttop'><h3><a href='"+urls+"'target='_blank'>"+ title+"</a></h3></div>Score: "+score+" Up:"+up+" Down:"+down+"<br><img src='"+urls+"' width='100%'></div>";
+	var urlstring = "";
+	if(urls.indexOf("jpg") != "-1"){
+		urlstring ="<img src='"+urls+"' width='100%'>";
+	}
+	
+	
+	ctext = ctext + "<div class='content'><div class='contenttop'><h3><a href='"+urls+"'target='_blank'>"+ title+"</a></h3></div><h5>Subreddit: "+subreddit+" Author: "+author+" Score: "+score+" Up:"+up+" Down:"+down+" </h5>"+urlstring+"</div>";
 		
 		
 	  });
@@ -64,9 +57,10 @@ var ctext = "";
 	 
 	*/
 	
-	//var ctext = "test";
+	
 	document.getElementById('Reddit').innerHTML = ctext;
 	refreshes = refreshes + 1;
+	document.getElementById('header').innerHTML = "<h1>Live Reddit Feed <br>Refreshed:"+refreshes+" Times</h1>";
 	})
 .error(function() { alert("error"); });
 	
@@ -83,7 +77,7 @@ setTimeout("loadChirp()",refreshevery);
 <div class="backgroundreddit">
 <div class="wrapper">
 
-<div class="topbars">
+<div id="header" class="header">
 <h1>Live Reddit Feed</h1>
 </div>
 <br>
@@ -92,7 +86,8 @@ setTimeout("loadChirp()",refreshevery);
 <ul title="menu">
 <li title="menu"><a href="index.html">HOME</a> |</li>
 <li title="menu"><a href="ragefaces.html">Rage Faces</a> |</li>
-<li title="menu"><a href="">Something Else</a></li>
+<li title="menu"><a href="rules.html">Rules of the Internet  |</a></li>
+<li title="menu"><a href="liveredditfeed.html">Live Reddit Feed </a></li>
 </ul>
 </div>
 </div>
