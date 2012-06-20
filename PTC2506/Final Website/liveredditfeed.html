@@ -16,8 +16,7 @@ var title;
 var score;
 var refreshes = 0;
 var ctext;
-var refreshevery = "5000"
-//var redd = document.getElementById('Reddit');
+var refreshevery = "15000"
 
 function loadChirp(){
 
@@ -43,20 +42,15 @@ function loadChirp(){
 	if(urls.indexOf("jpg") != "-1"){
 		urlstring ="<img src='"+urls+"' width='100%'>";
 	}
+	if(urls.indexOf("png") != "-1"){
+		urlstring ="<img src='"+urls+"' width='100%'>";
+	}
 	
 	
 	ctext = ctext + "<div class='content'><div class='contenttop'><h3><a href='"+urls+"'target='_blank'>"+ title+"</a></h3></div><h5>Subreddit: "+subreddit+" Author: "+author+" Score: "+score+" Up:"+up+" Down:"+down+" </h5>"+urlstring+"</div>";
 		
 		
 	  });
-	/*
-	  $('<ul/>', {
-		'class': 'my-new-list',
-		html: items.join('')
-	  }).appendTo('body');
-	 
-	*/
-	
 	
 	document.getElementById('Reddit').innerHTML = ctext;
 	refreshes = refreshes + 1;
@@ -73,8 +67,8 @@ setTimeout("loadChirp()",refreshevery);
 </script>
 </head>
 
-<body onLoad="loadChirp();">
-<div class="backgroundreddit">
+<body id="backgroundreddit" ">
+
 <div class="wrapper">
 
 <div id="header" class="header">
@@ -92,10 +86,16 @@ setTimeout("loadChirp()",refreshevery);
 </div>
 </div>
 
+
+<div class="content">
+<div class="contenttop">Info</div>
+This page works by repeatedly pulling the .json file for the Reddit frontpage, and styling that data. Given that the content comes from an external source, I am not responsible for it. Parents, hide your children!<br>
+<center><input type="button" value="I understand" onclick="loadChirp();"></center>
+</div>
 <div id="Reddit"> </div>
 
 
-</div>
+
 </div>
 </body>
 </html>

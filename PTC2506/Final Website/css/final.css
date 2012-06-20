@@ -76,18 +76,16 @@ body {
 }
 .topbars {
 	font-family: "Comic Sans MS", cursive;
-	font-size: 16px;
+	font-size: 18px;
 	-webkit-border-top-left-radius: 30px;
 	-webkit-border-top-right-radius: 10px;
 	-webkit-border-bottom-left-radius: 10px;
 	-webkit-border-bottom-right-radius: 30px;
-	
 	-moz-border-radius-bottomleft: 10px;
 	-moz-border-radius-bottomright: 30px;
 	-moz-border-radius-topright: 10px;
 	-moz-border-radius-topleft: 30px;
-	
-	color: #03F;
+	color: #000;
 	height: auto;
 	width: 1000px;
 	background-color: #0F0;
@@ -110,7 +108,7 @@ body {
 	-webkit-border-top-right-radius: 10px;
 	-webkit-border-bottom-left-radius: 10px;
 	-webkit-border-bottom-right-radius: 30px;
--moz-border-radius-bottomleft: 10px;
+	-moz-border-radius-bottomleft: 10px;
 	-moz-border-radius-bottomright: 30px;
 	-moz-border-radius-topright: 10px;
 	-moz-border-radius-topleft: 30px;
@@ -123,6 +121,15 @@ body {
 	margin-left: 10px;
 	border: thin none #000;
 	margin-top: 10px;
+	transition: width 2s;
+	-moz-transition: width 2s; /* Firefox 4 */
+	-webkit-transition: width 2s; /* Safari and Chrome */
+	-o-transition: width 2s; /* Opera */
+	float: left;	
+}
+.content:hover {
+	width: 1050px;
+	background-color: #CCC;
 }
 .contenttop{
 	-webkit-border-top-left-radius: 30px;
@@ -160,6 +167,14 @@ body {
 	border: thin none #000;
 	margin-top: 10px;
 	display: inline;
+	
+	transition: width 2s;
+	-moz-transition: width 2s; /* Firefox 4 */
+	-webkit-transition: width 2s; /* Safari and Chrome */
+	-o-transition: width 2s; /* Opera */
+}
+.leftcontent:hover{
+width: 500px;	
 }
 .rightcontent {
 	float: right;
@@ -182,8 +197,14 @@ body {
 	margin-left: 10px;
 	border: thin none #000;
 	margin-top: 10px;
+	transition: width 2s;
+	-moz-transition: width 2s; /* Firefox 4 */
+	-webkit-transition: width 2s; /* Safari and Chrome */
+	-o-transition: width 2s; /* Opera */
 }
-
+.rightcontent:hover{
+width: 500px;	
+}
 body {
 	background-color: #000;
 	
@@ -192,7 +213,27 @@ body {
 	margin-right: auto;
 	margin-left: auto;
 }
-.backgroundreddit{
-background-image: url(../images/backgroundred.png);	
+
+.leftinnercontent{
+float: left;	
+width: 50%;
+}
+.rightinnercontent{
+	float: right;
+	width: 50%;
+	height: 100%;
+	text-align: left;
 	
+}
+
+/* Since I will use different backgrounds for some pages, I am applying ID based tags */
+#backgroundreddit{
+	background-image: url(../images/backgroundred.png);
+	background-attachment: fixed;	
+}
+
+#backgroundrage{
+	background-image: url(../images/ragebackground.jpg);
+	background-attachment: fixed;
+	background-position: center;	
 }
