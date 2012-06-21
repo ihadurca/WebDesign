@@ -71,16 +71,8 @@ setTimeout("loadChirp()",refreshevery);
 <h1>Live Reddit Feed</h1>
 </div>
 <br>
-<div class="topbars">
-<div class="menu">
-<ul title="menu">
-<li title="menu"><a href="index.html">HOME</a> |</li>
-<li title="menu"><a href="ragefaces.html">Rage Faces</a> |</li>
-<li title="menu"><a href="rules.html">Rules of the Internet  |</a></li>
-<li title="menu"><a href="liveredditfeed.html">Live Reddit Feed </a></li>
-</ul>
-</div>
-</div>
+<?php include "menu.php" ?>
+
 
 
 <div class="content">
@@ -97,6 +89,7 @@ setTimeout("loadChirp()",refreshevery);
 <div id="Reddit"> </div>
 
 
+<?php include "footer.php" ?>
 
 </div>
 </body>

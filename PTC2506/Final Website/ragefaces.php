@@ -12,16 +12,8 @@
 <h1>Rage Faces</h1>
 </div>
 <br>
-<div class="topbars">
-<div class="menu">
-<ul title="menu">
-<li title="menu"><a href="index.html">HOME</a> |</li>
-<li title="menu"><a href="ragefaces.html">Rage Faces</a> |</li>
-<li title="menu"><a href="rules.html">Rules of the Internet  |</a></li>
-<li title="menu"><a href="liveredditfeed.html">Live Reddit Feed </a></li>
-</ul>
-</div>
-</div>
+<?php include "menu.php" ?>
+
 <div class="content">
 <div class="contenttop">Info</div>
 Rage faces were adopted by the reddit community in the site's youth. Many were borrowed from 4chan, many more created by the Reddit community. They are often used as components for "rage comics".  </div>
@@ -178,10 +170,8 @@ Images on every page - 3.
 
 
 -->
-<div class="content">
-<div class="contenttop">End of page!</div>
-Notice: All rage faces are the property of their original creators. 
-</div>
+
+<?php include 'footer.php' ?>
 
 </div>
 

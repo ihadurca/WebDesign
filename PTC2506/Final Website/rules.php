@@ -5,22 +5,16 @@
 <title>Rules of the Internet</title>
 <link href="css/final.css" rel="stylesheet" type="text/css">
 </head>
+<body>
+
 <div class="wrapper">
 
 <div class="header">
 <h1>Rules of the internet</h1>
 </div>
 <br>
-<div class="topbars">
-<div class="menu">
-<ul title="menu">
-<li title="menu"><a href="index.html">HOME</a> |</li>
-<li title="menu"><a href="ragefaces.html">Rage Faces</a> |</li>
-<li title="menu"><a href="rules.html">Rules of the Internet  |</a></li>
-<li title="menu"><a href="liveredditfeed.html">Live Reddit Feed </a></li>
-</ul>
-</div>
-</div>
+<?php include "menu.php" ?>
+
 <br>
 <div class="content">
 <div class="contenttop">As imagined by <a href="http://www.4chan.org" target="_blank">4chan</a></div>
@@ -103,8 +97,8 @@ Rules 48-62: {Omitted}<br>
 Shamelessly stolen from www.raiseakitten.com</center>
 </div>
 
+<?php include "footer.php" ?>
 
 </div>
-<body>
 </body>
 </html>

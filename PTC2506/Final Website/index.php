@@ -15,6 +15,8 @@
 
 
 </head>
+<body>
+
 <div class="wrapper">
 
 <div class="header">
@@ -22,16 +24,8 @@
 </div>
 <br>
 <!-- Menu Begin -->
-<div class="topbars">
-<div class="menu">
-<ul title="menu">
-<li title="menu"><a href="index.html">HOME</a> |</li>
-<li title="menu"><a href="ragefaces.html">Rage Faces</a> |</li>
-<li title="menu"><a href="rules.html">Rules of the Internet  |</a></li>
-<li title="menu"><a href="liveredditfeed.html">Live Reddit Feed </a></li>
-</ul>
-</div>
-</div>
+<?php include "menu.php" ?>
+
 <!-- Menu End -->
 
 <div class='content'>
@@ -88,10 +82,10 @@ Some type of content
 <div class='contenttop'>Some sort of top block</div>
 Some type of content
 </div>
+<?php include 'footer.php' ?>
 
 
 
 </div>
-<body>
 </body>
 </html>
