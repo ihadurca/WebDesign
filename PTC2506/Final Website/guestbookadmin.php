@@ -30,17 +30,15 @@
 
 <div class='content'>
 <div class='contenttop'>Guestbook</div>
-<form action="guestbook.php" method="get">
+<form action="guestbookadmin.php" method="get">
 <table>
 <tr>
-	<td>Name: </td><td><input type="text" name="name"></td>
+	<td>Action: </td><td><select name="action">
+    <option value="create">Create Table</option>
+    <option value="drop">Drop Table</option>
+    </select>
 </tr>
-<tr>
-	<td>Email: </td><td><input type="text" name="email"></td>
-</tr>
-<tr>
-<td>Comment: </td><td><textarea name="comment"></textarea></td>
-</tr>
+
 <tr>
 <td><input type="submit" value="Submit"></td>
 </tr>
@@ -52,19 +50,21 @@
 $action = $_GET["action"];
 $name = $_GET["name"];
 $comment = $_GET["comment"];
-$email = $_GET["email"];
 
 $dbconn = sqlite_open('guestbook.dat');
 
 $ipaddy = ip2long(getRealIpAddr());
-$querytext = "";    
-	if ($dbconn) {
-      
+    if ($dbconn) {
+        if($action =="create"){
+			sqlite_query($dbconn, "CREATE TABLE guests (Name TEXT, Comment TEXT, Email TEXT, Date TEXT);");
+		}
+		if($action =="drop"){
+			sqlite_query($dbconn, "DROP TABLE guests");
+		}
+		
 		//input new data
 		if($name!=""){
-			
-			$querytext = "INSERT INTO guests VALUES ('$name', '$comment', '$email', date('now'))";
-			sqlite_query($dbconn, $querytext);
+			sqlite_query($dbconn, "INSERT INTO guests VALUES ('$name', '$comment', date('now');");
 		}
 		
 		//query and show all data
@@ -91,7 +91,7 @@ $querytext = "";
 			</div>";
 		}
 		
-        echo $querytext;
+        
        
     } else {
         print "Connection to database failed!\n";
