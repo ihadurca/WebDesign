@@ -15,7 +15,7 @@
 
 
 </head>
-<body>
+<body id="backgroundguest">
 
 <div class="wrapper">
 
@@ -30,7 +30,7 @@
 
 <div class='content'>
 <div class='contenttop'>Guestbook</div>
-<form action="guestbook.php" method="get">
+<form action="guestbook.php" method="post">
 <table>
 <tr>
 	<td>Name: </td><td><input type="text" name="name"></td>
@@ -49,10 +49,10 @@
 </div>
 
 <?
-$action = $_GET["action"];
-$name = $_GET["name"];
-$comment = $_GET["comment"];
-$email = $_GET["email"];
+$action = $_POST["action"];
+$name = $_POST["name"];
+$comment = $_POST["comment"];
+$email = $_POST["email"];
 
 $dbconn = sqlite_open('guestbook.dat');
 
@@ -78,8 +78,7 @@ $querytext = "";
 			$recemail = $row['Email'];
 			//get gravatar
 			
-			$default = "http://www.somewhere.com/homestar.jpg";
-			$size = 40;
+$default = "http://www.eloquent-web-and-graphic-design.com/2012_summer/01/nicholas_lace/final_project/images/anonymous_avatar.png";				$size = 80;
 			$grav_url = "http://www.gravatar.com/avatar/" . md5( strtolower( trim( $recemail ) ) ) . "?d=" . urlencode( $default ) . "&s=" . $size;
 			
 			//Build containers for each row & format

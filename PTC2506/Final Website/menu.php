@@ -2,7 +2,7 @@
 <div class="topbars">
 <div class="menu">
 <ul title="menu">
-<li title="menu"><a href="index.php">HOME</a> |</li>
+<li title="menu"><a href="index.php">Intro</a> |</li>
 <li title="menu"><a href="ragefaces.php">Rage Faces</a> |</li>
 <li title="menu"><a href="rules.php">Rules of the Internet  |</a></li>
 <li title="menu"><a href="liveredditfeed.php">Live Reddit Feed |</a></li>

@@ -21,6 +21,15 @@
 The rules of the internet were intended as a form of netiquette to guide & prepare users for the horrors they would soon witness.  
 </div>
 
+
+<div class='rightcontent'>
+<div class='contenttop'>Rules eh?</div>
+<div id="justcenter">
+<img src="http://i1.kym-cdn.com/photos/images/newsfeed/000/160/285/LONELY%20COMPUTER%20GUY%20-%20RULES%20OF%20THE%20INTERNET.png">
+</div>
+</div>
+
+
 <div class='leftcontent'>
 <div class='contenttop'>Rules 1 & 2</div>
 1. Do not talk about /b (4chan's Random Imageboard)<br>
@@ -29,7 +38,7 @@ The rules of the internet were intended as a form of netiquette to guide & prepa
 
 
 
-<div class='rightcontent'>
+<div class='leftcontent'>
 <div class='contenttop'>Rules 3 - 7 (AKA the Anon Rules)</div>
 3. We are Anonymous.<br>
 4. Anonymous is legion.<br>

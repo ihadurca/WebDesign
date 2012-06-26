@@ -120,15 +120,14 @@ body {
 	margin-right: 10px;
 	margin-left: 10px;
 	border: thin none #000;
-	margin-top: 10px;
-	transition: width 2s;
-	-moz-transition: width 2s; /* Firefox 4 */
-	-webkit-transition: width 2s; /* Safari and Chrome */
-	-o-transition: width 2s; /* Opera */
+	margin-top: 10px;	transition: width 1s;
+	-moz-transition: width 1s; /* Firefox 4 */
+	-webkit-transition: width 1s; /* Safari and Chrome */
+	-o-transition: width 1s; /* Opera */
 	float: left;	
 }
 .content:hover {
-	width: 1050px;
+	width: 1010px;
 	background-color: #CCC;
 }
 .contenttop{
@@ -151,14 +150,11 @@ body {
 	-webkit-border-top-right-radius: 10px;
 	-webkit-border-bottom-left-radius: 10px;
 	-webkit-border-bottom-right-radius: 30px;
-	
 	-moz-border-radius-bottomleft: 10px;
 	-moz-border-radius-bottomright: 30px;
 	-moz-border-radius-topright: 10px;
 	-moz-border-radius-topleft: 30px;
-	
 	color: #000;
-	
 	width: 450px;
 	background-color: #FFF;
 	text-align:left;
@@ -167,14 +163,13 @@ body {
 	border: thin none #000;
 	margin-top: 10px;
 	display: inline;
-	
-	transition: width 2s;
-	-moz-transition: width 2s; /* Firefox 4 */
-	-webkit-transition: width 2s; /* Safari and Chrome */
-	-o-transition: width 2s; /* Opera */
+	transition: width 1s;
+	-moz-transition: width 1s; /* Firefox 4 */
+	-webkit-transition: width 1s; /* Safari and Chrome */
+	-o-transition: width 1s;
 }
 .leftcontent:hover{
-width: 500px;	
+width: 460px;	
 }
 .rightcontent {
 	float: right;
@@ -197,13 +192,13 @@ width: 500px;
 	margin-left: 10px;
 	border: thin none #000;
 	margin-top: 10px;
-	transition: width 2s;
-	-moz-transition: width 2s; /* Firefox 4 */
-	-webkit-transition: width 2s; /* Safari and Chrome */
-	-o-transition: width 2s; /* Opera */
+	transition: width 1s;
+	-moz-transition: width 1s; /* Firefox 4 */
+	-webkit-transition: width 1s; /* Safari and Chrome */
+	-o-transition: width 1s; /* Opera */
 }
 .rightcontent:hover{
-width: 500px;	
+width: 460px;	
 }
 body {
 	background-color: #000;
@@ -236,4 +231,16 @@ width: 50%;
 	background-image: url(../images/ragebackground.jpg);
 	background-attachment: fixed;
 	background-position: center;	
+}
+
+
+#backgroundguest{
+	background-image: url(../images/anonymous.jpg);
+	background-attachment: fixed;
+	background-position: center;	
+}
+
+#justcenter {
+		text-align: center;
+
 }

@@ -77,16 +77,17 @@ $ipaddy = ip2long(getRealIpAddr());
 			$ccom = $row['Comment'];
 			$recemail = $row['Email'];
 			//get gravatar
-			
-			$default = "http://www.somewhere.com/homestar.jpg";
-			$size = 40;
-			$grav_url = "http://www.gravatar.com/avatar/" . md5( strtolower( trim( $recemail ) ) ) . "?d=" . urlencode( $default ) . "&s=" . $size;
+			$default = "http://www.eloquent-web-and-graphic-design.com/2012_summer/01/nicholas_lace/final_project/images/anonymous_avatar.png";	
+			$size = 80;
+			$grav_url = "http://www.gravatar.com/avatar/";
+			$grav_url .= md5( strtolower( trim( $recemail ) ) ) . "?d=";
+			$grav_url .= urlencode( $default ) . "&s=" . $size;
 			
 			//Build containers for each row & format
 			echo "<div class='content'>
 			<div class='contenttop'>$date - $cname</div>
 			<div class='leftinnercontent'><img src='$grav_url'></div>
-			<div class='rightinnercontent'>$ccom</div>
+			<div class='rightinnercontent'>$ccom<br>$recemail</div>
 			
 			</div>";
 		}
