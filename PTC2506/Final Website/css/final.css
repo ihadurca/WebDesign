@@ -2,7 +2,11 @@
 /* CSS Document */
 
 /* normalizes margin, padding */
-ul,ol,li,h1,h2,h3,h4,h5,h6,hr,pre,form,body,html,p,blockquote,fieldset,input { margin:0; padding:0; }
+ul,ol,li,h1,h2,h3,h4,h5,h6,hr,pre,form,body,html,p,blockquote,fieldset,input {
+	margin:0;
+	padding-top: 0;
+	
+}
 
 @font-face {
     font-family: 'NeoRetroDrawRegular';
@@ -59,12 +63,10 @@ body {
 	-webkit-border-top-right-radius: 10px;
 	-webkit-border-bottom-left-radius: 10px;
 	-webkit-border-bottom-right-radius: 30px;
-	
 	-moz-border-radius-bottomleft: 10px;
 	-moz-border-radius-bottomright: 30px;
 	-moz-border-radius-topright: 10px;
 	-moz-border-radius-topleft: 30px;
-	
 	color: #03F;
 	height: auto;
 	width: 1000px;
@@ -120,11 +122,15 @@ body {
 	margin-right: 10px;
 	margin-left: 10px;
 	border: thin none #000;
-	margin-top: 10px;	transition: width 1s;
+	margin-top: 10px;
+	transition: width 1s;
 	-moz-transition: width 1s; /* Firefox 4 */
 	-webkit-transition: width 1s; /* Safari and Chrome */
 	-o-transition: width 1s; /* Opera */
-	float: left;	
+	float: left;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
 }
 .content:hover {
 	width: 1010px;
@@ -133,14 +139,14 @@ body {
 .contenttop{
 	-webkit-border-top-left-radius: 30px;
 	-webkit-border-top-right-radius: 10px;
-	
 	-moz-border-radius-topright: 10px;
 	-moz-border-radius-topleft: 30px;
-	
-	
 	border: thin none #000;
 	background-color: #03F;
-	text-align: center;	
+	text-align: center;
+	color: #FFF;
+	margin-right: -10px;
+	margin-left: -10px;
 }
 .leftcontent {
 	float: left;
@@ -167,6 +173,9 @@ body {
 	-moz-transition: width 1s; /* Firefox 4 */
 	-webkit-transition: width 1s; /* Safari and Chrome */
 	-o-transition: width 1s;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
 }
 .leftcontent:hover{
 width: 460px;	
@@ -196,13 +205,15 @@ width: 460px;
 	-moz-transition: width 1s; /* Firefox 4 */
 	-webkit-transition: width 1s; /* Safari and Chrome */
 	-o-transition: width 1s; /* Opera */
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
 }
 .rightcontent:hover{
 width: 460px;	
 }
 body {
 	background-color: #000;
-	
 	background-repeat: repeat-y;
 	background-position: 50%;
 	margin-right: auto;
@@ -218,7 +229,6 @@ width: 50%;
 	width: 50%;
 	height: 100%;
 	text-align: left;
-	
 }
 
 /* Since I will use different backgrounds for some pages, I am applying ID based tags */
@@ -240,6 +250,7 @@ width: 50%;
 	background-position: center;	
 }
 
+/*Sometimes I just want to center something without using <center>*/
 #justcenter {
 		text-align: center;
 
